@@ -14,6 +14,10 @@
 		3324010A29CAA859006E9A43 /* Nain_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324010929CAA859006E9A43 /* Nain_DemoTests.swift */; };
 		3324011429CAA859006E9A43 /* Nain_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324011329CAA859006E9A43 /* Nain_DemoUITests.swift */; };
 		3324011629CAA859006E9A43 /* Nain_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324011529CAA859006E9A43 /* Nain_DemoUITestsLaunchTests.swift */; };
+		33C073C429CC137700600109 /* web3swift in Frameworks */ = {isa = PBXBuildFile; productRef = 33C073C329CC137700600109 /* web3swift */; };
+		33C073C729CC13CA00600109 /* PictureLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C073C629CC13CA00600109 /* PictureLoaderView.swift */; };
+		33C073CB29CC400A00600109 /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C073CA29CC400A00600109 /* BackgroundGradient.swift */; };
+		33C073CE29CC59F100600109 /* BrickButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C073CD29CC59F100600109 /* BrickButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,9 @@
 		3324010F29CAA859006E9A43 /* Nain-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nain-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3324011329CAA859006E9A43 /* Nain_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nain_DemoUITests.swift; sourceTree = "<group>"; };
 		3324011529CAA859006E9A43 /* Nain_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nain_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		33C073C629CC13CA00600109 /* PictureLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureLoaderView.swift; sourceTree = "<group>"; };
+		33C073CA29CC400A00600109 /* BackgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradient.swift; sourceTree = "<group>"; };
+		33C073CD29CC59F100600109 /* BrickButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C073C429CC137700600109 /* web3swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +102,13 @@
 		332400F729CAA858006E9A43 /* Nain-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				33C073CC29CC59D200600109 /* styles */,
+				33C073C529CC13B300600109 /* components */,
 				332400F829CAA858006E9A43 /* Nain_DemoApp.swift */,
 				332400FA29CAA858006E9A43 /* ContentView.swift */,
 				332400FC29CAA859006E9A43 /* Assets.xcassets */,
 				332400FE29CAA859006E9A43 /* Preview Content */,
+				33C073CA29CC400A00600109 /* BackgroundGradient.swift */,
 			);
 			path = "Nain-Demo";
 			sourceTree = "<group>";
@@ -127,6 +138,22 @@
 			path = "Nain-DemoUITests";
 			sourceTree = "<group>";
 		};
+		33C073C529CC13B300600109 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				33C073C629CC13CA00600109 /* PictureLoaderView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		33C073CC29CC59D200600109 /* styles */ = {
+			isa = PBXGroup;
+			children = (
+				33C073CD29CC59F100600109 /* BrickButtonStyle.swift */,
+			);
+			path = styles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +170,9 @@
 			dependencies = (
 			);
 			name = "Nain-Demo";
+			packageProductDependencies = (
+				33C073C329CC137700600109 /* web3swift */,
+			);
 			productName = "Nain-Demo";
 			productReference = 332400F529CAA858006E9A43 /* Nain-Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 332400EC29CAA858006E9A43;
+			packageReferences = (
+				33C073C229CC137700600109 /* XCRemoteSwiftPackageReference "web3swift" */,
+			);
 			productRefGroup = 332400F629CAA858006E9A43 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +291,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				332400FB29CAA858006E9A43 /* ContentView.swift in Sources */,
+				33C073CE29CC59F100600109 /* BrickButtonStyle.swift in Sources */,
+				33C073CB29CC400A00600109 /* BackgroundGradient.swift in Sources */,
 				332400F929CAA858006E9A43 /* Nain_DemoApp.swift in Sources */,
+				33C073C729CC13CA00600109 /* PictureLoaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +613,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		33C073C229CC137700600109 /* XCRemoteSwiftPackageReference "web3swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/matter-labs/web3swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		33C073C329CC137700600109 /* web3swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33C073C229CC137700600109 /* XCRemoteSwiftPackageReference "web3swift" */;
+			productName = web3swift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 332400ED29CAA858006E9A43 /* Project object */;
 }
